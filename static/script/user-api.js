@@ -41,6 +41,9 @@ function join() {
         return;
     }
 
+    console.log(data)
+
+ 
     $.ajax({
         "url": `/api/v1/users/`,
         "method": "POST",
@@ -52,7 +55,7 @@ function join() {
         "data": JSON.stringify(data),
     }).done(function (response) {
         console.log(response);
-
+        
         if(response.username === username) {
             location.href = "/login";
         } else {
@@ -62,6 +65,7 @@ function join() {
     }).fail(function (error) {
         console.log(error);
     })
+    
 }
 
 function update_user() {
