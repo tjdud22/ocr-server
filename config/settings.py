@@ -91,7 +91,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "ocrdb",    #데이터베이스명
         "USER": "root",
-        "PASSWORD": "my1234",
+        "PASSWORD": "root",
         "HOST": "localhost",
         "PORT": "3306",
     }
