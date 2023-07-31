@@ -18,6 +18,16 @@
             <textarea id="contents" name="contents" readonly></textarea>
             <div id="image-container">
                 <img id="loaded_file" name="loaded_file" src="">
+
+                <div id="langpack">
+                    <form>
+                       <div><input type="checkbox" id="check1"><label for="check1">kor</label></div> 
+                       <div><input type="checkbox" id="check2"><label for="check2">eng</label></div> 
+
+                    </form>
+
+                </div>
+
             </div>
             <input type="datetime" id="created_at" readonly>
             <input type="datetime" id="modified_at" readonly>
@@ -28,3 +38,6 @@
 {% include 'footer.html' %}
 
 </html>
+
+
+
