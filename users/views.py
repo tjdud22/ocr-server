@@ -46,7 +46,7 @@ class Logout(APIView) :
 
     def post(self,request) :
        logout(request)
-       return redirect("/api/v1/boards")
+       return Response({"logout" : "success"})
 
 
 

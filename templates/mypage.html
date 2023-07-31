@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,5 +9,7 @@
 </head>
 <body>
     mypage
+    <button onclick="logout()">LOGOUT</button>
 </body>
+<script src="{% static 'script/logout-api.js' %}"></script>
 </html>

@@ -23,6 +23,7 @@ from django.shortcuts import redirect
 from pyuploadcare import Uploadcare, File
 from django.conf import settings
 
+import os
 
 
 def say_hello(request) :
@@ -70,10 +71,13 @@ class Boards(APIView) :
                     image_url = f"https://ucarecdn.com/{ucare_file.uuid}/"
                     board.image_url = image_url
 
-
-
             board.author = request.user
             board.save()
+
+            if os.path.isfile(board.loaded_file.path) :
+                os.remove(board.loaded_file.path)
+
+
             return redirect(f'/board/{board.pk}')
             # serializer.save() # 내장되어있는 create() 메소드를 호출하게 됨 
             # return Response(serializer.data) 
