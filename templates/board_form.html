@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/form.css' %}"> </head>
+    {% include 'header.html' %}
+
+<body>
+    <section>
+        <h2>게시글 등록</h2>
+        <form method="POST" action="/api/v1/boards/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" id="title" name="title" placeholder="title" autofocus>
+            <textarea id="contents" name="contents"></textarea>
+            <input type="file" id="file" name="loaded_file" accept="image/png, image/jpg, image/jpeg, image.gif">
+            <input type="submit">
+        </form>
+    </section>
+</body>
+{% include 'footer.html' %}
+
+</html>
+
+
+
+
+
+<!-- {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/style/main.css'%}">
+    <title>Document</title>
+
+    <style>
+
+
+        form{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .board{ 
+            text-align: center;
+            /* width: 50%; */
+            margin: 0 auto;
+        }
+
+
+        form div{
+       
+            margin: 5px;
+        }
+        .board input{
+        width: 400px;
+        height: 30px;
+
+        }
+
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div class="board">
+
+        <h2>게시판</h2>
+        <form method="POST" action="/api/v1/boards/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+            
+            <input type="text" id="title" name="title" placeholder="title">
+    
+        </div>
+        <div>
+        
+            </div>
+            <div>
+            <textarea id="contents" name="contents" style="width: 400px; height: 300px;  resize: none; ">
+    
+            </textarea>
+        </div>
+        <div>
+            <input type="file" name="loaded_file" id="loaded_file" accept="image/png, image/jpg, image/jpeg, image.gif">
+        </div>
+    
+        <input type="datetime" id="create_at " readonly>
+        <input type="submit" value="등록">
+        </form>
+    
+    
+    
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html> -->

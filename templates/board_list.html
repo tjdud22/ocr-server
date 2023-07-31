@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/list.css' %}">
+</head>
+{% include 'header.html' %}
+<body>
+    <section>
+        <h2>게시판</h2>
+        <div id="boards-container"></div>
+    </section>
+    <script src="{% static 'script/boards-api.js' %}"></script>
+</body>
+{% include 'footer.html' %}
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% include 'header.html' %}
+<body>
+
+    <div class="board-list">
+        <h2>게시판</h2>
+        <div id="boards-container"></div>
+
+
+
+
+    </div>
+
+</body>
+{% include 'footer.html' %}
+</html> -->

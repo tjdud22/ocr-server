@@ -1,0 +1,136 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* position:relative; */
+    /* margin-bottom: 5%; */
+    height: 200px;
+    /* margin: 26px 0; */
+    /* line-height: 100px; */
+}
+
+
+
+.footer h3{
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+
+
+.header{
+    position:relative;
+    /* margin-bottom: 5%; */
+    height: 100px;
+    line-height: 100px;
+}
+
+.logo{
+    position: absolute;
+    left: 5%;
+}
+
+.top_nav{
+    position: absolute;
+    width: 30%;
+    right: 5%;
+    min-width: 278px;
+}
+
+.top_nav li{
+    display: inline-block;
+    margin: 0 1%;
+}
+
+
+.section{
+
+display: flex;
+/* flex-wrap: wrap; */
+/* width: 100%; */
+min-width: 300px;
+margin:0 auto;
+/* justify-content: space-around; */
+
+}
+.section-container{
+    
+   height: 10%;
+    width: 25%;
+    /* background-color: rgb(191, 211, 228); */
+}
+
+.board-content {
+    border: 1px solid blueviolet; 
+    text-align: center;
+    transition: 0.3s;
+    padding: 10px;
+}
+input{
+    transition: 0.3s;
+}
+.section-container a{
+    display: inline-block;
+  
+}
+ .section-container a:hover img{ 
+    transform: scale(1.1); 
+    /* 이미지 크기를 1.1배로 확대 */
+    transition: transform 1.5s ease; 
+    /* 변화를 부드럽게 하는 0.3초의 트랜지션 효과 */
+    transition-duration: 1.5s;
+    object-fit: fill; 
+    /* 이미지가 컨테이너에 꽉 차도록 설정 */
+   
+}
+
+.img {
+    transition: transform 1.5s ease; 
+    transition-duration: 1.5s;
+    transform: scale(1); 
+     /* 이미지를 원래 크기로 설정 */
+  overflow: hidden; 
+  /* 이미지를 넘치는 부분을 숨김 */
+ } 
+
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지를 요소에 맞게 확대/축소하여 조정 */
+}
+
+.board-content:hover{
+    background-color: rgb(236, 171, 244);
+    color: white;
+    
+
+}
+
+.board-content:hover input{
+    background-color: rgb(236, 171, 244);
+    color: white;
+}
+
+.board-content input{
+    border: none;
+    text-align: center;
+}
+
+
+.num{
+    text-align: center;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1{
+    color: rgb(236, 171, 244);
+}
+
+
