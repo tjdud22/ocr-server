@@ -15,6 +15,16 @@ $.ajax({
     $('#modified_at').val(board.modified_at);
 
     
+    var langpack = $('#langpack');
+
+
+    if (board.image_url) {
+      langpack.show()
+    }else{
+        langpack.hide()
+    }
+
+
 
 });
 
