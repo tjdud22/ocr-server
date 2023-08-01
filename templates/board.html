@@ -16,7 +16,33 @@
             <input type="text" id="title" name="title" readonly>
             <p type="text" id="author"></p>
             <textarea id="contents" name="contents" readonly></textarea>
+
             <div id="image-container">
+                <img id="loaded_file" name="loaded_file" src="{{ image_path }}">
+    
+                <div id="langpack">
+                    <!-- Form for text conversion -->
+                    <form method="post" action="/put/">
+                        {% csrf_token %}
+                        <div>
+                            <input type="hidden" name="image_path" value="{{ image_path }}">
+                            <input type="checkbox" id="check1" name="lang" value="kor">
+                            <label for="check1">Korean</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="check2" name="lang" value="eng">
+                            <label for="check2">English</label>
+                        </div>
+                        <button type="submit">Text Conversion</button>
+                    </form>
+                    <!-- Display the resulttext here -->
+                    {{ resulttext }}
+                </div>
+            </div>
+
+
+
+            <!-- <div id="image-container">
                 <img id="loaded_file" name="loaded_file" src="">
 
                 <div id="langpack">
@@ -28,7 +54,7 @@
 
                 </div>
 
-            </div>
+            </div> -->
             <input type="datetime" id="created_at" readonly>
             <input type="datetime" id="modified_at" readonly>
         </div>

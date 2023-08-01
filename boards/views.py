@@ -134,6 +134,31 @@ class BoardDetail(APIView) :
 
         board.delete()
         return Response({})
+    
+
+# ocr
+
+from PIL import Image
+import pytesseract
+
+# Tesseract OCR 경로 설정 (Tesseract가 설치된 경로로 변경해주세요)
+pytesseract.pytesseract.tesseract_cmd = r'C:\leeseoyoung\workspace\tesseract.exe'
+
+def extract_text_from_image(image, lang='eng'):
+    # 이미지에서 글씨 추출
+    resulttext = pytesseract.image_to_string(image, lang=lang)
+    return resulttext
+
+
+def put(self, request, image_path):
+    image = Image.open(image_path)
+    if request.method == 'POST':
+        lang = 'kor' if 'check1' in request.POST else 'eng'
+        resulttext = extract_text_from_image(image, lang)
+      
+        return render(request, 'board.html', {'resulttext': resulttext})
+ 
+
 
     # def delete(self, request,pk) :
          
